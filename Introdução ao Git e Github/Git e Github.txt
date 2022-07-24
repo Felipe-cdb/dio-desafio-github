@@ -1,0 +1,82 @@
+############################## GIT e GITHUB ####################################
+
+Comandos Básicos para terminais
+		Windows(CMD)	Linux(Terminal)
+abri:		cd		cd
+listar:		dir		ls
+criar:		mkdir		mkdir
+deletar:	del ou rmdir	rm -rf
+limpar: 	cls		clear ou Ctrl+L
+
+------------------------------------------------------------------------------------
+baixar o git em: 
+https://git-scm.com/
+
+ler documentação do git para dirar dúvidas em:
+https://git-scm.com/doc
+
+------------------------------------------------------------------------------------
+
+Objetos internos do git
+
+sha1 : uma especie de id com 40 caractere para representar cada objeto.
+objetos fundamentais : blob, tree e commit ->   (commit(tree(blob)))
+
+------------------------------------------------------------------------------------
+
+chave SSH e Token
+
+primeiro no git bash use os 3 comandos a baixo:
+1. Depois de usar o comando a baixo coloque a chave gerada em seu github
+ssh-keygen -t ed25519 -C meu@email.com
+
+2.
+eval $(ssh-agent -s)
+
+3.
+ssh-add id_ed25519
+
+------------------------------------------------------------------------------------
+
+Comandos Básicos do git:
+
+git clone
+se clonarmos um projeto do github por exemplos podemos ir em um repositorio e
+ir no botão code, ali temos algumas opções para clonar, https, ssh e github cli
+obs: devemos está no diretorio que deseja deixar o projeto clonado.
+
+clonando pelo ssh(copia o ssh):
+git clone caminhoSSHcopiado
+
+---------------------------------------------
+git init
+iniciar repositorios do git
+
+configurações do usuário.
+git config --global user.email "felipecdbm@gmail.com"
+
+git config --global user.name "Felipe Correia"
+
+---------------------------------------------
+git add
+para adicionar as mudança feitas até o momento
+
+---------------------------------------------
+git commit
+efetiva todas as mudanças para o repositorio local
+
+---------------------------------------------
+git status
+os status atuais da brach atual
+
+---------------------------------------------
+git config --list
+todas as informações de configuração como nome e email
+
+---------------------------------------------
+git push origin branch
+joga todas as mudanças locais para o repósitorio remoto
+
+---------------------------------------------
+git pull origin branch
+atualiza todas as mudanças que estão no repósitorio remoto para o local
